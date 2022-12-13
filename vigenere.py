@@ -21,14 +21,15 @@ def decrypt(cipher, key):
 
 
 def main():
-    plainText = 'CRYPTOGRAPHY'
+
+    plainText =input("enter plain text") 
     key = 'ASMT'
-    cipher = 'CJKITGSKAHTR'
+   
 
-    eText = encrypt(plainText, key)
-    cText = decrypt(cipher, key)
+    eText = encrypt(plainText.upper(), key)
+    cText = decrypt(eText, key)
 
-    print(eText)
-    print(cText)
+    print("Encrypted text:" +eText)
+    print("Decrypted text" +cText)
 
 main()
